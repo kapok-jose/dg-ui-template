@@ -1,0 +1,88 @@
+/*
+    基于Jquery的mask插件
+    dg-pop-ups.js 
+    V1.0.0 
+    Jose
+*/
+.dg-maskBox{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    left: 0;
+    top: 0;
+    z-index: 99999;
+    font-size: .3rem;
+    display: none;
+}
+.dg-maskBg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+}
+.dg-maskContent{
+    width: 6rem;
+    background: #fff;
+    text-align: center;
+    border-radius: .24rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.dg-showmask .dg-maskBg{
+    display: block;
+}
+.dg-maskTitle{
+    font-size: .32rem;
+    line-height: 1rem;
+    color: #000;
+    font-weight: 600;
+}
+.dg-text{
+    padding: 0 .4rem .2rem;
+    line-height: .5rem;
+    color: #626466;
+    font-size: .3rem;
+    word-break: break-all;
+}
+.dg-group{
+    width: 90%;
+	display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    height: 1.2rem;
+    text-align: center;
+    margin: 0 auto;
+    font-size: .3rem;
+}
+.dg-button{
+    width: 2.4rem;
+    height: .8rem;
+    line-height: .8rem;
+    display: inline-block;
+    border-radius: .4rem;
+    font-size: .3rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    border:.02rem solid #ededed;
+    color: #626466;
+}
+.eventStyle{
+    border-color:#ff6619;
+    color: #ff6619;
+}
+

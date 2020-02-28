@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../static/flexible.debug.js"></script>
+    <script src="../static/jquery.min.js"></script>
+    <script src="./pop-ups.min.js"></script>
+    <link rel="stylesheet" href="./pop-ups.css">
+</head>
+
+<body style="padding: 1rem;">
+    <button onclick="fn()">按钮1</button>
+    <button onclick="fn2()">按钮2</button>
+    <button onclick="fn3()">按钮3</button>
+    <br><br><br><br><br>
+    <button onclick="closeMask()">关闭</button>
+</body>
+
+</html>
+<script>
+    function fn() {
+        $('body').mask({
+            mask: true,  //是否显示遮罩层
+            title: "我是1111",
+            text: "23421321321442353454",
+            handler: ['暂不需要', '去付款'],
+            callback: function (res) {
+                switch (res) {
+                    case '暂不需要':
+                        // 逻辑
+                        $('body').close()
+                        break;
+                    case '去付款':
+                        // 逻辑
+                        console.log(res)
+                        break;
+                    default:
+                        return
+                }
+            }
+        });
+    }
+
+    function fn2() {
+        $('body').mask({
+            mask: true,  //是否显示遮罩层
+            title: "我是2222",
+            text: "二二二二二二二二二二二二二二二二",
+            handler: ['暂不需要', '去付款'],
+            callback: function (res) {
+                switch (res) {
+                    case '暂不需要':
+                        // 逻辑
+                        $('body').close()
+                        break;
+                    case '去付款':
+                        // 逻辑
+                        console.log(res)
+                        break;
+                    default:
+                        return
+                }
+            }
+        });
+    }
+
+    function fn3(){
+        $('body').mask({
+            callback:function(res){
+                console.log(333)
+            }
+        })
+    }
+
+</script>
