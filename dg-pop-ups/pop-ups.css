@@ -4,16 +4,17 @@
     V1.0.0 
     Jose
 */
-.dg-maskBox{
+.dg-mask{
     position: fixed;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5);
     left: 0;
     top: 0;
     z-index: 99999;
-    font-size: .3rem;
     display: none;
+}
+.dg-showmask{
+    display: block;
 }
 .dg-maskBg{
     width: 100%;
@@ -31,7 +32,8 @@
     border-radius: .24rem;
     position: absolute;
     left: 50%;
-    top: 50%;
+    /* top: 50%; */
+    top: 120%;
     transform: translate(-50%,-50%);
 }
 .dg-showmask .dg-maskBg{
@@ -49,6 +51,7 @@
     color: #626466;
     font-size: .3rem;
     word-break: break-all;
+    text-align: left;
 }
 .dg-group{
     width: 90%;
@@ -63,6 +66,7 @@
     text-align: center;
     margin: 0 auto;
     font-size: .3rem;
+    margin-bottom: .1rem;
 }
 .dg-button{
     width: 2.4rem;

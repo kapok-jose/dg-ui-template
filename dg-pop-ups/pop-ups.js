@@ -1,3 +1,10 @@
+/*
+    基于Jquery的mask插件
+    dg-pop-ups.js 
+    V1.1.0   
+    Jose
+    增加对齐方式
+*/
 ; (function (root, factory) {
     'use strict';
 
@@ -23,7 +30,7 @@
         $ = root.jQuery || null;
     }
     if (!$) {
-        throw new TypeError("必须引入jquery库方可正常使用！");
+        throw new TypeError("必须引入jquery库才能正常使用！");
     }
 
     var arraySlice = Array.prototype.slice,
@@ -112,11 +119,15 @@
 
             if (ops.mask) {
                 this.curtainElement.addClass("dg-showmask");
+                setTimeout(function(){
+                    $('.dg-maskContent').animate({top:'50%'},ops.animate)
+                },10)
             } else {
                 this.curtainElement.removeClass("dg-showmask");
             }
             this.titleElement.text(ops.title);
-            this.areatextElement.text(ops.text)
+            this.areatextElement.html(ops.text)
+            this.areatextElement.css('text-align',ops.align)
             if (ops.handler && ops.handler instanceof Array) {
                 var handlerHtml = ''
                 for (var i = 0; i < ops.handler.length; i++) {
@@ -134,6 +145,7 @@
             } else {
                 console.error('handler选项请传入数组')
             }
+
 
             return this;
         },
@@ -159,7 +171,6 @@
 
             return this;
 
-
         },
         destroy: function () {
 
@@ -170,7 +181,9 @@
         mask: true,  //是否显示遮罩层
         title: "默认标题",
         text: "默认文本",
-        handler: ['我知道了']
+        align: 'left',
+        handler: ['我知道了'],
+        animate: 150
     };
 
     $.fn.mask = function (options) {
