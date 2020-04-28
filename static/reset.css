@@ -1,0 +1,21 @@
+@charset "utf-8";
+*,:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box}
+*{margin:0; padding:0;}
+html,a,button,input{-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+body{ background:#f5f5f5;font-family: 'PingFang SC', "Microsoft YaHei", 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif; overflow-x:hidden;}
+ul,p,label,h1, h2, h3, h4, h5, h6,dl{margin:0; padding:0;} 
+ul li, i{ list-style:none;}
+em,i,strong{font-style:normal}
+a:active,a:hover,a:link,a:visited {outline:0 none;}
+a{ text-decoration:none;outline:none;blr:expression(this.onFocus=this.blur());border:none 0;}
+a:focus{outline:none 0;}
+a.hidefocus{outline:none 0;}
+input,button,textarea{border:0 none;outline:none;font-family: 'PingFang SC', "Microsoft YaHei", 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;}
+img{display: block;}
+/* -------- 通用样式 --------*/
+.floatLeft{float: left;}
+.floatRight{float: right;}
+/* 内容区域 */
+.content_body{
+    font-size: .28rem;    
+}
